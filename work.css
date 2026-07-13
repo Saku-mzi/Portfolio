@@ -32,8 +32,30 @@ nav {
 }
 
 main {
-  div {
-  }
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-end: 10;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+}
+div#designWork {
+  background-color: aqua;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+div#webWork {
+  background-color: aqua;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  grid-column-start: 3;
+  grid-column-end: 8;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
