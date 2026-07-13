@@ -53,7 +53,7 @@ main {
 
   #workLogo {
     transition: 1s ease;
-    margin: 2rem 0 0 0;
+    margin: 10rem 0 0 0;
   }
   #workLogo:hover {
     rotate: 45deg;
@@ -76,5 +76,5 @@ footer {
 }
 
 #contacts a:hover {
-  opacity: 0.5;
+  opacity: 0.4;
 }
