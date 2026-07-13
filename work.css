@@ -27,7 +27,6 @@ nav {
   #logo:hover {
     filter: invert(0.8);
     rotate: 45deg;
-    position: sticky;
   }
 }
 

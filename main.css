@@ -26,8 +26,7 @@ nav {
 
   #logo:hover {
     filter: invert(0.8);
-    rotate: 45deg;
-    position: sticky;
+    rotate: 49deg;
   }
 }
 
@@ -49,7 +48,7 @@ main {
   }
 
   #workLogo:hover {
-    rotate: 45deg;
+    rotate: 49deg;
     filter: invert(0.8);
   }
 }
