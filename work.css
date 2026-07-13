@@ -29,21 +29,11 @@ nav {
     rotate: 45deg;
     position: sticky;
   }
-
-  #menu {
-    position: absolute;
-    display: flex;
-    padding: 5px;
-    right: 0;
-    transition: 1s ease;
-  }
 }
 
 main {
-  grid-row-start: 1;
-  grid-row-end: 10;
-  grid-column-start: 2;
-  grid-column-end: 9;
+  div {
+  }
 }
 
 footer {

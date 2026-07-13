@@ -29,14 +29,6 @@ nav {
     rotate: 45deg;
     position: sticky;
   }
-
-  #menu {
-    position: absolute;
-    display: flex;
-    padding: 5px;
-    right: 0;
-    transition: 1s ease;
-  }
 }
 
 main {
@@ -55,6 +47,7 @@ main {
     transition: 1s ease;
     margin: 10rem 0 0 0;
   }
+
   #workLogo:hover {
     rotate: 45deg;
     filter: invert(0.8);
