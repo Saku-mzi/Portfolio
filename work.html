@@ -3,43 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sakumzi Sipamla</title>
+    <meta name="description" content="Work by Sakumzi Sipamla — selected projects in web development, UI/UX, graphic design, and multimedia." />
+    <title>Work — Sakumzi Sipamla</title>
     <link rel="stylesheet" href="work.css" />
   </head>
   <body>
-    <nav>
-      <div id="logo">
-        <a href="index.html">
-          <img src="images/homeLogo.svg" width="50px" alt="yes" />
-        </a>
-      </div>
+
+    <!-- ── Nav ──────────────────────────────────────────────── -->
+    <nav aria-label="Primary navigation">
+      <a class="nav-logo" href="index.html" aria-label="Back to home">
+        <img src="images/homeLogo.svg" alt="Sakumzi Sipamla logo" />
+      </a>
+      <span class="nav-label">Selected Work</span>
     </nav>
+
+    <!-- ── Page header ───────────────────────────────────────── -->
+    <header class="page-header">
+      <p class="page-eyebrow">Portfolio</p>
+      <h1 class="page-title">
+        Selected<br /><span class="accent">Work.</span>
+      </h1>
+    </header>
+
+    <!-- ── Column labels ─────────────────────────────────────── -->
+    <div class="work-grid-header" aria-hidden="true">
+      <span class="work-col-label">/ Design</span>
+      <span class="work-col-label">/ Web Development</span>
+    </div>
+
+    <!-- ── Work grid ─────────────────────────────────────────── -->
     <main>
-      <div id="designWork">.</div>
-      <div id="webWork">.</div>
+      <div class="work-grid" role="list" aria-label="Projects">
+
+        <!-- Design column -->
+        <article class="work-cell empty" role="listitem">
+          <span class="work-cell-number">D — 001</span>
+          <p class="work-cell-title">Projects coming soon</p>
+        </article>
+
+        <!-- Web Dev column -->
+        <article class="work-cell empty" role="listitem">
+          <span class="work-cell-number">W — 001</span>
+          <p class="work-cell-title">Projects coming soon</p>
+        </article>
+
+        <!-- Placeholder slots to suggest depth -->
+        <article class="work-cell empty" role="listitem" aria-hidden="true">
+          <span class="work-cell-number">D — 002</span>
+        </article>
+
+        <article class="work-cell empty" role="listitem" aria-hidden="true">
+          <span class="work-cell-number">W — 002</span>
+        </article>
+
+      </div>
+
+      <div class="coming-soon" aria-live="polite">
+        More projects being added
+      </div>
     </main>
-    <footer id="contacts">
-      <a href="mailto:sakumzisipamla@gmail.com"
-        ><img
-          class="socialsFr"
-          src="images/envelope-simple.svg"
-          alt="email-logo"
-          width="40px"
-      /></a>
-      <a href="https://github.com/Saku-mzi"
-        ><img
-          class="socialsFr"
-          src="images/github-logo.svg"
-          alt="Github-logo"
-          width="40px"
-      /></a>
-      <a href="https://wa.me/+27659302134"
-        ><img
-          class="socialsFr"
-          src="images/whatsapp-logo.svg"
-          alt="whatsapp-logo"
-          width="40px"
-      /></a>
+
+    <!-- ── Footer ───────────────────────────────────────────── -->
+    <footer id="contacts" aria-label="Contact links">
+      <div class="availability">
+        <span class="availability-dot" aria-hidden="true"></span>
+        Available for collaboration
+      </div>
+
+      <nav class="footer-socials" aria-label="Social links">
+        <a href="mailto:sakumzisipamla@gmail.com" aria-label="Send email">
+          <img src="images/envelope-simple.svg" alt="Email" />
+        </a>
+        <a href="https://github.com/Saku-mzi" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer">
+          <img src="images/github-logo.svg" alt="GitHub" />
+        </a>
+        <a href="https://wa.me/+27659302134" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+          <img src="images/whatsapp-logo.svg" alt="WhatsApp" />
+        </a>
+      </nav>
+
+      <p class="footer-copy">&#169; 2025 Sakumzi Sipamla</p>
     </footer>
+
   </body>
 </html>

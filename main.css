@@ -1,73 +1,313 @@
-* {
-  color: rgb(27, 27, 27);
-  font-family: Geneva, "Segoe UI", Tahoma, Verdana, sans-serif;
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --bg:        #0a0a0a;
+  --surface:   #141414;
+  --fg:        #f0ede8;
+  --muted:     #5a5a5a;
+  --accent:    #e8ff3b;   /* electric lime – single brand pop */
+  --border:    #1f1f1f;
+
+  --font-heading: 'Neue Haas Grotesk Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
-  max-width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  overflow-x: hidden;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { display: block; }
+
+/* ─── Nav ────────────────────────────────────────────────────── */
 nav {
-  grid-row-start: 1;
-  grid-row-end: 1;
-  width: 100%;
-
-  #logo {
-    padding: 1rem;
-    transition: 1s ease;
-    margin: 0;
-  }
-
-  #logo:hover {
-    filter: invert(0.8);
-    rotate: 45deg;
-    position: sticky;
-  }
-}
-
-main {
-  grid-row-start: 1;
-  grid-row-end: 10;
-  grid-column-start: 2;
-  grid-column-end: 9;
-  place-items: center;
-  place-content: center;
-
-  p {
-    text-align: justify;
-  }
-
-  #workLogo {
-    transition: 1s ease;
-    margin: 10rem 0 0 0;
-  }
-
-  #workLogo:hover {
-    rotate: 45deg;
-    filter: invert(0.8);
-  }
-}
-
-footer {
-  grid-row-start: 10;
-  grid-row-end: 11;
-  grid-column-start: 2;
-  grid-column-end: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  background: transparent;
 }
 
-#contacts a {
+.nav-logo {
   display: flex;
-  transition: 1s ease;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-#contacts a:hover {
-  opacity: 0.4;
+.nav-logo img {
+  width: 36px;
+  height: 36px;
+  filter: invert(1);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.nav-logo:hover img {
+  transform: rotate(45deg);
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(30deg);
+}
+
+.nav-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav-work-link {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.nav-work-link::after {
+  content: '↗';
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-work-link:hover {
+  color: var(--accent);
+}
+
+.nav-work-link:hover::after {
+  transform: translate(2px, -2px);
+}
+
+/* ─── Hero ───────────────────────────────────────────────────── */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2.5rem 5rem;
+  min-height: 100dvh;
+}
+
+.hero-eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: var(--muted);
+}
+
+.hero-name {
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 9vw, 9rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--fg);
+  margin-bottom: 1.5rem;
+}
+
+.hero-name span.accent {
+  color: var(--accent);
+}
+
+.hero-disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.discipline-tag {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.875rem;
+  border-radius: 999px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.discipline-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hero-bio {
+  max-width: 38ch;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 3.5rem;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  transition: background 0.2s ease, gap 0.2s ease;
+  width: fit-content;
+}
+
+.hero-cta:hover {
+  background: var(--fg);
+  gap: 1.25rem;
+}
+
+/* ─── Scroll indicator ───────────────────────────────────────── */
+.scroll-hint {
+  position: fixed;
+  bottom: 2rem;
+  right: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  writing-mode: vertical-rl;
+}
+
+/* ─── Big decorative index number ───────────────────────────── */
+.hero-index {
+  position: fixed;
+  top: 50%;
+  right: 2.5rem;
+  transform: translateY(-50%);
+  font-size: clamp(6rem, 14vw, 14rem);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────── */
+footer {
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.footer-socials img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+/* ─── Availability badge ─────────────────────────────────────── */
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.availability-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3de08d;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  nav { padding: 1rem 1.25rem; }
+
+  main { padding: 0 1.25rem 4rem; }
+
+  .hero-index { display: none; }
+
+  .scroll-hint { display: none; }
+
+  footer { padding: 1.25rem; }
 }

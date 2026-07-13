@@ -3,58 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sakumzi Sipamla</title>
+    <meta name="description" content="Sakumzi Sipamla — web developer &amp; designer crafting digital experiences across front-end development, UI/UX, graphic design, and multimedia production." />
+    <title>Sakumzi Sipamla — Developer &amp; Designer</title>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <nav>
-      <div id="logo">
-        <a href="index.html">
-          <img src="images/homeLogo.svg" width="50px" alt="yes" />
-        </a>
-      </div>
+
+    <!-- ── Nav ──────────────────────────────────────────────── -->
+    <nav aria-label="Primary navigation">
+      <a class="nav-logo" href="index.html" aria-label="Home">
+        <img src="images/homeLogo.svg" alt="Sakumzi Sipamla logo" />
+      </a>
+      <a class="nav-work-link" href="work.html">Work</a>
     </nav>
+
+    <!-- ── Decorative outline number ─────────────────────────── -->
+    <div class="hero-index" aria-hidden="true">01</div>
+
+    <!-- ── Hero ─────────────────────────────────────────────── -->
     <main>
-      <div id="paragraph">
-        <p>
-          <b
-            >Hi there! I'm Sakumzi Sipamla, I'm a web developer in training with
-            a passion for designing and developing digital experiences that
-            combine creativity with functionality. My interests span across the
-            creativity spectrum, ranging from front-end web development, graphic
-            design, UI/UX, to multimedia production. I enjoy transforming ideas
-            into interactive experiences through thoughtful design.</b
-          >
-        </p>
+      <p class="hero-eyebrow">Based in South Africa</p>
+
+      <h1 class="hero-name">
+        Sakumzi<br />
+        <span class="accent">Sipamla.</span>
+      </h1>
+
+      <div class="hero-disciplines" role="list" aria-label="Areas of focus">
+        <span class="discipline-tag" role="listitem">Front-end Dev</span>
+        <span class="discipline-tag" role="listitem">UI / UX</span>
+        <span class="discipline-tag" role="listitem">Graphic Design</span>
+        <span class="discipline-tag" role="listitem">Multimedia</span>
       </div>
-      <div id="workLogo">
-        <a href="work.html"
-          ><img src="images/workLogo.svg" width="50px" alt="d"
-        /></a>
-      </div>
+
+      <p class="hero-bio">
+        Web developer in training with a passion for designing digital experiences
+        that combine creativity with functionality. I turn ideas into interactive
+        realities through thoughtful design.
+      </p>
+
+      <a class="hero-cta" href="work.html" aria-label="View my work">
+        View Work <span aria-hidden="true">→</span>
+      </a>
     </main>
-    <footer id="contacts">
-      <a href="mailto:sakumzisipamla@gmail.com"
-        ><img
-          class="socialsFr"
-          src="images/envelope-simple.svg"
-          alt="email-logo"
-          width="40px"
-      /></a>
-      <a href="https://github.com/Saku-mzi"
-        ><img
-          class="socialsFr"
-          src="images/github-logo.svg"
-          alt="Github-logo"
-          width="40px"
-      /></a>
-      <a href="https://wa.me/+27659302134"
-        ><img
-          class="socialsFr"
-          src="images/whatsapp-logo.svg"
-          alt="whatsapp-logo"
-          width="40px"
-      /></a>
+
+    <!-- ── Scroll hint ───────────────────────────────────────── -->
+    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+
+    <!-- ── Footer ───────────────────────────────────────────── -->
+    <footer id="contacts" aria-label="Contact links">
+      <div class="availability">
+        <span class="availability-dot" aria-hidden="true"></span>
+        Available for collaboration
+      </div>
+
+      <nav class="footer-socials" aria-label="Social links">
+        <a href="mailto:sakumzisipamla@gmail.com" aria-label="Send email">
+          <img src="images/envelope-simple.svg" alt="Email" />
+        </a>
+        <a href="https://github.com/Saku-mzi" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer">
+          <img src="images/github-logo.svg" alt="GitHub" />
+        </a>
+        <a href="https://wa.me/+27659302134" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+          <img src="images/whatsapp-logo.svg" alt="WhatsApp" />
+        </a>
+      </nav>
+
+      <p class="footer-copy">&#169; 2025 Sakumzi Sipamla</p>
     </footer>
+
   </body>
 </html>
