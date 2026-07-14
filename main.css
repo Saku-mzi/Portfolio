@@ -1,5 +1,5 @@
 * {
-  color: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
   font-family: Geneva, "Segoe UI", Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -11,6 +11,17 @@ body {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
+  margin: auto;
+  contain: content;
+
+  img {
+    margin: -50%;
+  }
+}
+#backgroundGradient {
+  filter: blur(1rem);
+  position: absolute;
+  z-index: -1;
 }
 
 nav {
@@ -25,7 +36,6 @@ nav {
   }
 
   #logo:hover {
-    filter: invert(0.8);
     rotate: 49deg;
   }
 }
@@ -49,7 +59,6 @@ main {
 
   #workLogo:hover {
     rotate: 49deg;
-    filter: invert(0.8);
   }
 }
 
