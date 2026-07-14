@@ -25,13 +25,13 @@ nav {
   grid-row-end: 1;
   width: 100%;
 
-  #logo {
+  #logo img {
     padding: 1rem;
-    transition: 1s ease;
+    transition: 0.6s ease;
     margin: 0;
   }
 
-  #logo:hover {
+  #logo img:hover {
     rotate: 45deg;
   }
 }
@@ -72,11 +72,11 @@ footer {
   justify-content: space-between;
 }
 
-#contacts a {
+#contacts img {
   display: flex;
-  transition: 1s ease;
+  transition: 0.6s ease;
 }
 
-#contacts a:hover {
-  opacity: 0.4;
+#contacts img:hover {
+  rotate: 49deg;
 }

@@ -13,15 +13,12 @@ body {
   grid-template-rows: repeat(10, 1fr);
   margin: auto;
   contain: content;
-
-  img {
-    margin: -50%;
-  }
 }
 #backgroundGradient {
   filter: blur(1rem);
   position: absolute;
   z-index: -1;
+  margin: -2rem;
 }
 
 nav {
@@ -29,13 +26,13 @@ nav {
   grid-row-end: 1;
   width: 100%;
 
-  #logo {
+  #logo img {
     padding: 1rem;
-    transition: 1s ease;
     margin: 0;
+    transition: 0.6s ease;
   }
 
-  #logo:hover {
+  #logo img:hover {
     rotate: 49deg;
   }
 }
@@ -52,12 +49,12 @@ main {
     text-align: justify;
   }
 
-  #workLogo {
-    transition: 1s ease;
+  #workLogo img {
+    transition: 0.6s ease;
     margin: 10rem 0 0 0;
   }
 
-  #workLogo:hover {
+  #workLogo img:hover {
     rotate: 49deg;
   }
 }
@@ -71,11 +68,11 @@ footer {
   justify-content: space-between;
 }
 
-#contacts a {
+#contacts img {
   display: flex;
-  transition: 1s ease;
+  transition: 0.6s ease;
 }
 
-#contacts a:hover {
-  opacity: 0.4;
+#contacts img:hover {
+  rotate: 49deg;
 }
