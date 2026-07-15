@@ -15,10 +15,12 @@ body {
   contain: content;
 }
 #backgroundGradient {
-  filter: blur(1rem);
-  position: absolute;
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+  filter: blur(1px);
   z-index: -1;
-  margin: -2rem;
 }
 
 nav {
