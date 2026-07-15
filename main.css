@@ -40,6 +40,7 @@ nav {
 }
 
 main {
+  width: 100%;
   grid-row-start: 1;
   grid-row-end: 10;
   grid-column-start: 2;
@@ -49,6 +50,7 @@ main {
 
   p {
     text-align: justify;
+    text-shadow: #c79d42 0.1px 0.5px 10px;
   }
 
   #workLogo img {
@@ -62,10 +64,11 @@ main {
 }
 
 footer {
+  width: 100%;
   grid-row-start: 10;
   grid-row-end: 11;
-  grid-column-start: 2;
-  grid-column-end: 9;
+  grid-column-start: 1;
+  grid-column-end: 10;
   display: flex;
   justify-content: space-between;
 }
@@ -77,4 +80,11 @@ footer {
 
 #contacts img:hover {
   rotate: 49deg;
+}
+#contacts {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
