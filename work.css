@@ -34,12 +34,13 @@ nav {
 }
 
 main {
-  width: 90vw;
+  width: 100dvw;
   margin: auto;
 }
 
 #designWork {
   margin: 30px auto 60px auto;
+  width: 80dvw;
 }
 
 #designWork ul {
@@ -87,10 +88,9 @@ main {
 }
 
 #contacts {
-  width: 280px;
-  margin: auto;
-  margin-bottom: 40px;
+  margin: 5rem auto;
   display: flex;
+  width: 70dvw;
   justify-content: space-between;
 }
 
@@ -106,9 +106,9 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
+  width: 100dvw;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,8 +124,8 @@ main {
 }
 
 #lightbox-img {
-  max-width: 95%;
-  max-height: 95%;
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
 }
 
@@ -143,7 +143,7 @@ main {
   }
 
   #lightbox-img {
-    max-width: 95%;
-    max-height: 85%;
+    max-width: 80%;
+    max-height: 80%;
   }
 }

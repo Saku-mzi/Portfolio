@@ -14,6 +14,7 @@ body {
   margin: auto;
   contain: content;
 }
+
 #backgroundGradient {
   position: fixed;
   width: 200%;
@@ -28,7 +29,7 @@ nav {
   grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: 11;
-  width: 100%;
+  width: 100dvw;
 }
 
 #homeLogo img {
@@ -42,7 +43,7 @@ nav {
 }
 
 main {
-  width: 100%;
+  width: 100dvw;
   grid-row-start: 1;
   grid-row-end: 10;
   grid-column-start: 1;
@@ -51,6 +52,7 @@ main {
   place-content: center;
 
   p {
+    width: 70dvw;
     padding: 5rem;
     text-align: justify;
     text-shadow: #c79d42 0.1px 0.5px 10px;
@@ -67,7 +69,7 @@ main {
 }
 
 footer {
-  width: 100%;
+  width: 100dvw;
   grid-row-start: 10;
   grid-row-end: 11;
   grid-column-start: 1;
@@ -85,9 +87,8 @@ footer {
   rotate: 49deg;
 }
 #contacts {
-  width: 70%;
+  width: 70dvw;
   margin: auto;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
 }
